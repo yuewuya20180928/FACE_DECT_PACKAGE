@@ -1,0 +1,21 @@
+#!/bin/sh
+
+ifconfig eth0 172.16.10.10
+route add default gw 172.16.10.1
+
+telnetd &
+
+export LD_LIBRARY_PATH=/usr/lib/:$LD_LIBRARY_PATH
+
+echo "start load ko"
+cd /komod
+./load3516dv300 -i
+
+echo "start config basic register"
+cd /opt
+./reg_init &
+
+#start app
+cd /opt
+./test &
+

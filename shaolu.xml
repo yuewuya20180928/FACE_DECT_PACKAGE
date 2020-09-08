@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<Partition_Info ProgrammerFile="">
+<Part Sel="1" PartitionName="fastboot" FlashType="emmc" FileSystem="none" Start="0" Length="1M" SelectFile="Z:\FACE_PLUS_PACKAGE\uboot\u-boot-hi3516dv300.bin"/>
+<Part Sel="1" PartitionName="kernel" FlashType="emmc" FileSystem="none" Start="1M" Length="4M" SelectFile="Z:\FACE_PLUS_PACKAGE\kernel\uImage_hi3516dv300_smp"/>
+<Part Sel="1" PartitionName="rootfs" FlashType="emmc" FileSystem="ext3/4" Start="5M" Length="512M" SelectFile="Z:\FACE_PLUS_PACKAGE\rootfs_ext4\rootfs.ext4"/>
+</Partition_Info>

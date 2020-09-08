@@ -1,0 +1,49 @@
+#!/bin/sh
+
+#reset sensor
+himm 0x114F0070 0x601
+
+#sensor0 clk
+himm 0x114F006C 0x401
+
+#sensor clk ->37.125MHZ
+himm 0x120100F0 0x21
+
+#LCD enable
+himm 0x112f0034 0x400
+himm 0x120d0400 0x60
+himm 0x120d0100 0x00
+sleep 0.1
+himm 0x120d0100 0x40
+
+#LCD reset
+himm 0x112F009c 0x600
+#himm 0x120D0400 0x20
+himm 0x120D0080 0x20
+sleep 0.1
+himm 0x120D0080 0x00
+sleep 0.12
+himm 0x120D0080 0x20
+
+#echo 5 > /sys/class/gpio/export
+#echo 6 > /sys/class/gpio/export
+
+#echo out > /sys/class/gpio/gpio6/direction
+#echo out > /sys/class/gpio/gpio5/direction
+
+#echo 0 > /sys/class/gpio/gpio6/value
+#usleep 100000
+#echo 1 > /sys/class/gpio/gpio6/value
+
+#echo 1 > /sys/class/gpio/gpio5/value
+#usleep 100000
+#echo 0 > /sys/class/gpio/gpio5/value
+#usleep 120000
+#echo 1 > /sys/class/gpio/gpio5/value
+
+
+#LCD backlight
+himm 0x111F0028 0x600
+himm 0x120D6400 0x80
+himm 0x120D6200 0x80
+
