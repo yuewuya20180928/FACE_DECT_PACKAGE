@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#reg_init for rp_hi3516dv300
+
 #reset sensor
 himm 0x114F0070 0x601
 

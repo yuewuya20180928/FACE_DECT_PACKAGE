@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ifconfig eth0 172.16.10.10
+ifconfig eth0 172.16.10.111
 route add default gw 172.16.10.1
 
 telnetd &
@@ -14,6 +14,12 @@ cd /komod
 echo "start config basic register"
 cd /opt
 ./reg_init &
+
+#start dsp
+cd /opt
+./dspzx &
+
+sleep 2
 
 #start app
 cd /opt

@@ -1,0 +1,52 @@
+{
+	"SENSOR_NUM": 1,
+	"LCD_TYPE":0,
+	"ENC_TYPE":0,
+
+	"SENSOR_PARAM": [
+		{
+			"sensorIdx": 4
+		},
+		{
+			"sensorIdx": 5
+		}
+	],
+
+	"DISP_PARAM": [
+		{
+			"x": 0,
+			"y": 0,
+			"w": 1024,
+			"h": 600
+		},
+
+		{
+			"x": 0,
+			"y": 0,
+			"w": 640,
+			"h": 480
+		}
+	],
+
+	"ENCODE_PARAM": [
+		{
+			"type" : "H265",
+			"w" : 1280,
+			"h" : 720,
+			"fps" : 30,
+			"gop" : 50,
+			"bitRate" : 4096,
+			"bitType" : "CBR"
+		},
+
+		{
+			"type" : "H265",
+			"w" : 1600,
+			"h" : 1200,
+			"fps" : 30,
+			"gop" : 50,
+			"bitRate" : 4096,
+			"bitType" : "CBR"
+		}
+	]
+}
